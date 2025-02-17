@@ -1,0 +1,48 @@
+.projects-page {
+  font-size: 1.2rem;
+  padding: 20px;
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .ant-card {
+    background: '#FFEBEE';
+    min-height: 162px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .ant-card-meta-title {
+    font-size: 1.3rem;
+  }
+
+  .ant-card-meta-description {
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .projects-page {
+    font-size: 1rem;
+    padding: 20px;
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .ant-card {
+      
+      max-height: 100px;
+    }
+  
+    .ant-card-meta-title {
+      font-size: 1rem;
+    }
+  
+    .ant-card-meta-description {
+      font-size: 1rem;
+    }
+  }
+}

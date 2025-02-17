@@ -1,0 +1,51 @@
+$primary-color: #3E2723;
+$hover-color: #FF5722;
+
+.Header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.Logo__container, a {
+  color: $primary-color;
+  align-items: center;
+  display: flex;
+  gap: 5px;
+
+  a:hover {
+    color: $hover-color;
+  }
+}
+
+.Contact__items {
+  display: flex;
+  gap: 20px;
+  color: $primary-color;
+
+  li {
+    font-weight: 700;
+    transition: transform 0.3s ease, margin 0.3s ease;
+  }
+
+  li:first-child:hover {
+    color: $hover-color;
+    transform: translateX(-10px) scale(1.2);
+  }
+
+  li:nth-child(n + 2):hover {
+    color: $hover-color;
+    transform: scale(1.2) translateY(10px); 
+  }
+
+  li:last-child:hover {
+    color: $hover-color;
+    transform: scale(1.2) translateX(10px); 
+  }
+
+  li a {
+    color: inherit;
+    display: block;
+  }
+}

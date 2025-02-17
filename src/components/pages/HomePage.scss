@@ -1,0 +1,46 @@
+.home-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  transition: background 0.5s ease;
+}
+
+.home-content {
+  text-align: center;
+  max-width: 600px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.greeting {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.intro-text-home {
+  font-size: 18px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.mobile-btn {
+  display: none;
+  background-color: #ffebee;
+  color: #000;
+  margin: 0 auto;
+}
+
+.mobile-btn:hover {
+  background-color: #FF5722 !important;
+}
+
+@media (max-width: 480px) {
+  .mobile-btn {
+    display: inline-block;
+  }
+}

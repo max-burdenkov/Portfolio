@@ -1,0 +1,9 @@
+.sider-app {
+  background: linear-gradient(135deg, #ffb6b9, #6e7f80); 
+  height: 100%;
+  transition: background 0.5s ease;
+}
+
+.sider-app .ant-layout-sider {
+  background: transparent; 
+}

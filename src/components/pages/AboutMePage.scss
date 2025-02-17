@@ -1,0 +1,167 @@
+.about-me {
+  background: linear-gradient(135deg, #1e1e2f, #25253d);
+  color: #fff;
+  padding: 4rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  max-width: 1200px; 
+  margin: 3rem auto;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease-out forwards;
+
+  .ant-card-head-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #3E2723;
+    text-align: center;
+    animation: fadeInText 1s ease-out forwards;
+  }
+
+  .intro-text-about {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: #3E2723;
+    text-align: center;
+    animation: fadeInText 1s ease-out forwards;
+  }
+
+  .skills-intro {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #ff9800;
+    text-align: center;
+    animation: fadeInText 1s ease-out forwards;
+  }
+
+  .skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ширші елементи */
+    gap: 2rem;
+    justify-items: center;
+    list-style-type: none;
+    padding: 0;
+    opacity: 0;
+    animation: fadeInSkills 1.2s ease-out forwards;
+  }
+
+  .skill-item {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    width: 200px;
+    max-width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.6s ease-out forwards;
+
+    &:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    svg {
+      font-size: 3.5rem;
+      color: #ff5722;  /* Яскравіший колір для іконок */
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    p {
+      color: #3E2723;
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    &:hover svg {
+      transform: rotate(15deg);
+    }
+  }
+
+  .skill-item:nth-child(odd) {
+    animation-delay: 0.2s;
+  }
+
+  .skill-item:nth-child(even) {
+    animation-delay: 0.4s;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInSkills {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-text-about {
+    font-size: 1.1rem !important; 
+    font-weight: 400;
+  }
+
+  .skills-intro {
+    font-size: 1rem !important; 
+  }
+
+  .ant-card-head-title {
+    font-size: 1rem !important; 
+  }
+
+  .skill-item {
+    font-size: 1rem !important;
+    margin: 0 auto;
+  }
+
+  .about-me {
+    padding: 0.5rem;
+  }
+}
